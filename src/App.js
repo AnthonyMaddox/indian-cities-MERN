@@ -13,7 +13,6 @@ const imphalWestRes =
   "https://indian-cities-api.herokuapp.com/cities/search?District=Imphal%20West";
 const chandelRes =
   "https://indian-cities-api.herokuapp.com/cities/search?District=Chandel";
-
 const imphalRes =
   "https://indian-cities-api.herokuapp.com/cities/search?City=Imphal";
 const samurouRes =
@@ -50,7 +49,7 @@ class App extends Component {
       <div className="appBody">
         <div className="top">
           <p className="topTitle">
-            Cities of Indian State: Manipur
+            Cities of Indian State: {this.state.allCities[0].City}
             <span>From Anthony Maddox's Indian Cities api</span>
           </p>
         </div>
@@ -115,6 +114,16 @@ class App extends Component {
           imphalWestCities: imphalWestRes.push(res[3]),
         });
       });
+    fetch(chandelRes, options)
+      .then((chandelRes) => {
+        return chandelRes.json();
+      })
+      .then((chandelRes) => {
+        console.log(chandelRes);
+        this.setState({
+          chandelCities: chandelRes,
+        });
+      });
     fetch(samurouRes, options)
       .then((samurouRes) => {
         return samurouRes.json();
@@ -125,7 +134,7 @@ class App extends Component {
           samurouCity: samurouRes,
         });
       });
-      fetch(nambolRes, options)
+    fetch(nambolRes, options)
       .then((nambolRes) => {
         return nambolRes.json();
       })
@@ -135,7 +144,7 @@ class App extends Component {
           imphalCity: nambolRes,
         });
       });
-      fetch(imphalRes, options)
+    fetch(imphalRes, options)
       .then((imphalRes) => {
         return imphalRes.json();
       })
@@ -143,16 +152,6 @@ class App extends Component {
         console.log(imphalRes);
         this.setState({
           chandelCities: imphalRes,
-        });
-      });
-      fetch(chandelRes, options)
-      .then((chandelRes) => {
-        return chandelRes.json();
-      })
-      .then((chandelRes) => {
-        console.log(chandelRes);
-        this.setState({
-          chandelCities: chandelRes,
         });
       });
   }
