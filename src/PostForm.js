@@ -1,28 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+//import { Formik, Form, Field, ErrorMessage } from "formik";
 
-//  export default function Create() {
-
-//    const formik = useFormik({
-//      initialValues: {
-//        City: "",
-//        State: "",
-//        District: ""
-//      },
-//      onSubmit: (values) => {
-//        // alert(JSON.stringify(values, null, 2));
-//        fetch({
-//          method: "post",
-//          url: "https://indian-cities-api.herokuapp.com/cities",
-//          data: {
-//            City: values.City,
-//            State: values.State,
-//            District: values.District,
-//          },
-//        });
-//      },
-//    });
 
 const res = "https://indian-cities-api.herokuapp.com/cities";
 

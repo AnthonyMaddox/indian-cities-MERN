@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
- import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import { Formik, Form, Field, ErrorMessage } from "formik";
 
-
-
-const res = "https://indian-cities-api.herokuapp.com/cities";
+// const res = "https://indian-cities-api.herokuapp.com/cities";
 
 class PutForm extends Component {
   constructor() {
@@ -13,31 +11,53 @@ class PutForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("help");
-    const data = new FormData(e.target);
+    console.log("help im updating");
+    let idUpdateInput = document.getElementById("idUpdateInput").value;
+    JSON.stringify(idUpdateInput);
+    let idToUpdate = idUpdateInput;
+    console.log(idToUpdate);
+
+    let city =
+      document.getElementById("cityUpdate").value.charAt(0).toUpperCase() +
+      document.getElementById("cityUpdate").value.slice(1);
+    let state =
+      document.getElementById("stateUpdate").value.charAt(0).toUpperCase() +
+      document.getElementById("stateUpdate").value.slice(1);
+    let district =
+      document.getElementById("districtUpdate").value.charAt(0).toUpperCase() +
+      document.getElementById("districtUpdate").value.slice(1);
+    let res = `https://indian-cities-api.herokuapp.com/cities/${idToUpdate}`;
     fetch(res, {
       method: "PUT",
-      body: data,
-    });
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        City: city,
+        State: state,
+        District: district,
+      }),
+    })
+      .then((res) => res.json())
+      .then((updatedCity) => console.log(updatedCity))
+      .catch((err) => console.log(err));
   }
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="formLine">
-          <label htmlFor="City">Enter ID</label>
-          <input id="id" name="_Id" type="text" />
+          <label htmlFor="id">Enter City id</label>
+          <input id="idUpdateInput" name="id" type="text" />
         </div>
         <div className="formLine">
           <label htmlFor="City">Enter City</label>
-          <input id="city" name="City" type="text" />
+          <input id="cityUpdate" name="City" type="text" />
         </div>
         <div className="formLine">
           <label htmlFor="State">Enter State</label>
-          <input id="state" name="State" type="text" />
+          <input id="stateUpdate" name="State" type="text" />
         </div>
         <div className="formLine">
           <label htmlFor="District">Enter District</label>
-          <input id="district" name="District" type="text" />
+          <input id="districtUpdate" name="District" type="text" />
         </div>
         <button className="dButton">Update City by ID</button>
       </form>

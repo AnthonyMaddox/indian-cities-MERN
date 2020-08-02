@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-// let idToDelete = "";
-// let res = `https://indian-cities-api.herokuapp.com/cities/${idToDelete}`;
 
 class DeleteForm extends Component {
   constructor() {
@@ -10,14 +8,14 @@ class DeleteForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("help I'm deleting");
+    console.log("oh no I'm deleting");
     let idInput = document.getElementById("idInput").value;
     JSON.stringify(idInput);
     let idToDelete = idInput;
     console.log(idToDelete);
 
     let res = `https://indian-cities-api.herokuapp.com/cities/${idToDelete}`;
-    document.getElementById("idInput").value = "";
+
     fetch(res, {
       method: "DELETE",
     })
@@ -29,11 +27,10 @@ class DeleteForm extends Component {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="formLine">
-          <label htmlFor="id">Enter City id</label>
-          <input id="idInput" name="City" type="text" />
+          <label htmlFor="idInput">Enter District</label>
+          <input id="idInput" name="idInput" type="text" />
         </div>
-
-        <button className="dButton">Delete City by ID</button>
+        <button className="dButton">Delete</button>
       </form>
     );
   }
