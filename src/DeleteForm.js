@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-
-const res = "https://indian-cities-api.herokuapp.com/cities";
+// let idToDelete = "";
+// let res = `https://indian-cities-api.herokuapp.com/cities/${idToDelete}`;
 
 class DeleteForm extends Component {
   constructor() {
@@ -10,32 +10,29 @@ class DeleteForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("help");
-    const data = new FormData(e.target);
+    console.log("help I'm deleting");
+    let idInput = document.getElementById("idInput").value;
+    JSON.stringify(idInput);
+    let idToDelete = idInput;
+    console.log(idToDelete);
+
+    let res = `https://indian-cities-api.herokuapp.com/cities/${idToDelete}`;
+
     fetch(res, {
-      method: "PUT",
-      body: data,
-    });
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((deletedCity) => console.log(deletedCity))
+      .catch((err) => console.log(err));
   }
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="formLine">
-          <label htmlFor="City">Enter ID</label>
-          <input id="id" name="_Id" type="text" />
+          <label htmlFor="id">Enter City id</label>
+          <input id="idInput" name="City" type="text" />
         </div>
-        <div className="formLine">
-          <label htmlFor="City">Enter City</label>
-          <input id="city" name="City" type="text" />
-        </div>
-        <div className="formLine">
-          <label htmlFor="State">Enter State</label>
-          <input id="state" name="State" type="text" />
-        </div>
-        <div className="formLine">
-          <label htmlFor="District">Enter District</label>
-          <input id="district" name="District" type="text" />
-        </div>
+
         <button className="dButton">Delete City by ID</button>
       </form>
     );

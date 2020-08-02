@@ -6,6 +6,7 @@ function Chandel(props) {
   return (
     <div className="cityList">
       <div>{props.chandelCities[0]}</div>
+      <div>{props.chandelCities[1]}</div>
     </div>
   );
 }

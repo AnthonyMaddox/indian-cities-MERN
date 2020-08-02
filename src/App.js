@@ -9,16 +9,6 @@ import DeleteForm from "./DeleteForm";
 
 const res =
   "https://indian-cities-api.herokuapp.com/cities/search?State=Manipur";
-//const imphalEastRes =
-// "https://indian-cities-api.herokuapp.com/cities/search?District=Imphal%20East";
-// const bishnupurRes =
-//   "https://indian-cities-api.herokuapp.com/cities/search?District=Bishnupur";
-// const thoubalRes =
-//   "https://indian-cities-api.herokuapp.com/cities/search?District=Thoubal";
-// const imphalWestRes =
-//   "https://indian-cities-api.herokuapp.com/cities/search?District=Imphal%20West";
-// const chandelRes =
-//   "https://indian-cities-api.herokuapp.com/cities/search?District=Chandel";
 const imphalRes =
   "https://indian-cities-api.herokuapp.com/cities/search?City=Imphal";
 const samurouRes =

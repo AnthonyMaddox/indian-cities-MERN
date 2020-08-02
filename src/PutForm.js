@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
+ import { Formik, Form, Field, ErrorMessage } from 'formik';
+
+
 
 const res = "https://indian-cities-api.herokuapp.com/cities";
 
-class putForm extends Component {
+class PutForm extends Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,4 +45,4 @@ class putForm extends Component {
   }
 }
 
-export default putForm;
+export default PutForm;
