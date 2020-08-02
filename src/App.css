@@ -5,9 +5,13 @@
 .bodyDiv {
   height: 100vh;
   background-image: url(./images/tribe2.jpg);
-  background-position: top 30px;
+  background-position: center;
   background-size: cover;
 }
+.App {
+   margin-top: -20px;
+}
+
 .districtBtn {
   text-align: center;
 }
@@ -37,14 +41,14 @@
 }
 .majorCities {
   display: flex;
-  justify-content: space-around;
-  margin: 20px 0 20px 20px;
+  justify-content: flex-start;
+  margin: 5px 0 20px 20px;
 }
 .cityList {
   border-radius: 15px;
   box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
     5px 5px 15px 5px rgba(0, 0, 0, 0);
-  padding: 10px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: space-around;
@@ -104,14 +108,13 @@
 }
 /* form */
 .crudDiv {
-   display: flex;
-
+  display: flex;
 }
 .updateDiv {
-   display: none;
+  display: none;
 }
 .deleteDiv {
-   display: none;
+  display: none;
 }
 .addDiv {
   display: none;
@@ -119,18 +122,18 @@
 .addBtn {
   margin-top: 100px;
   background-color: burlywood;
-  padding: 5px 20px;
+  padding: 1px 20px;
 }
-.formDiv {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
+.crudDiv {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
 .form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px 30vw 0 30vw;
+  margin: 0 30vw 0 30vw;
 }
 .formline {
   display: flex;

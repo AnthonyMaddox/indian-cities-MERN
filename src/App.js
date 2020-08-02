@@ -79,18 +79,30 @@ class App extends Component {
     e.preventDefault();
     let addDiv = document.querySelector(".addDiv");
     addDiv.classList.toggle("display");
+    let updateDiv = document.querySelector(".updateDiv");
+    updateDiv.classList.remove("display");
+    let deleteDiv = document.querySelector(".deleteDiv");
+    deleteDiv.classList.remove("display");
   };
   handleUpdateClick = (e) => {
     console.log("update");
     e.preventDefault();
     let updateDiv = document.querySelector(".updateDiv");
     updateDiv.classList.toggle("display");
+    let deleteDiv = document.querySelector(".deleteDiv");
+    deleteDiv.classList.remove("display");
+    let addDiv = document.querySelector(".addDiv");
+    addDiv.classList.remove("display");
   };
   handleDeleteClick = (e) => {
     console.log("delete");
     e.preventDefault();
     let deleteDiv = document.querySelector(".deleteDiv");
     deleteDiv.classList.toggle("display");
+    let addDiv = document.querySelector(".addDiv");
+    addDiv.classList.remove("display");
+    let updateDiv = document.querySelector(".updateDiv");
+    updateDiv.classList.remove("display");
   };
 
   render() {

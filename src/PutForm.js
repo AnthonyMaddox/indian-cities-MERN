@@ -20,16 +20,21 @@ class putForm extends Component {
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
-        <div className="formLine"><label htmlFor="City">Enter City</label>
-        <input id="city" name="City" type="text" />
+        <div className="formLine">
+          <label htmlFor="City">Enter ID</label>
+          <input id="id" name="_Id" type="text" />
         </div>
         <div className="formLine">
-        <label htmlFor="State">Enter State</label>
-        <input id="state" name="State" type="text" />
+          <label htmlFor="City">Enter City</label>
+          <input id="city" name="City" type="text" />
         </div>
         <div className="formLine">
-        <label htmlFor="District">Enter District</label>
-        <input id="district" name="District" type="text" />
+          <label htmlFor="State">Enter State</label>
+          <input id="state" name="State" type="text" />
+        </div>
+        <div className="formLine">
+          <label htmlFor="District">Enter District</label>
+          <input id="district" name="District" type="text" />
         </div>
         <button className="dButton">Update City by ID</button>
       </form>
