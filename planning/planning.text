@@ -1,0 +1,101 @@
+psuedo code: fetch data from my own api and use it some way in a react app
+
+three major cities that take up more than one district highlighted at the top
+buttons that when clicked show picture with description
+
+district button that when clicked shows
+all districts as buttons that when clicked show all cities within that district
+
+
+
+figure out CRUD operations from user side
+
+
+
+
+
+componentDidMount() {
+   //  fetch(res, getOptions)
+   //    .then((res) => {
+   //      return res.json();
+   //    })
+   //    .then((res) => {
+   //      for (let i = 0; i < res.length; i++) {
+   //        this.setState({
+   //          allDistricts: res[i].District,
+   //        });
+   //      }
+   //    });
+     fetch(res, getOptions)
+       .then((res) => {
+         return res.json();
+       })
+       .then((res) => {
+         // for (let i = 0; i < res.length; i++) {
+         //   console.log(res[i].City);
+         // }
+         this.setState({
+           allCities: res,
+           stateName: res[3].State,
+           imphalCity: res[3],
+           nambolCity: res[18],
+           samurouCity: res[23],
+         });
+         // for (let i = 0; i < res.length; i++) {
+         //  this.setState({
+         //    allDistricts: res[i].District,
+         //  });
+        //}
+       });
+   //  fetch(imphalEastRes, getOptions)
+   //    .then((imphalEastRes) => {
+   //      return imphalEastRes.json();
+   //    })
+   //    .then((imphalEastRes) => {
+   //      console.log(imphalEastRes);
+   //      this.setState({
+   //        imphalEastCities: imphalEastRes,
+   //      });
+   //    });
+    fetch(bishnupurRes, getOptions)
+      .then((bishnupurRes) => {
+        return bishnupurRes.json();
+      })
+      .then((bishnupurRes) => {
+        console.log(bishnupurRes);
+        this.setState({
+          bishnupurCities: bishnupurRes,
+        });
+      });
+    fetch(thoubalRes, getOptions)
+      .then((thoubalRes) => {
+        return thoubalRes.json();
+      })
+      .then((thoubalRes) => {
+        console.log(thoubalRes);
+        this.setState({
+          thoubalCities: thoubalRes,
+        });
+      });
+    fetch(imphalWestRes, getOptions)
+      .then((imphalWestRes) => {
+        return imphalWestRes.json();
+      })
+      .then((imphalWestRes) => {
+        console.log(imphalWestRes);
+        this.setState({
+          imphalWestCities: imphalWestRes,
+        });
+      });
+    fetch(chandelRes, getOptions)
+      .then((chandelRes) => {
+        return chandelRes.json();
+      })
+      .then((chandelRes) => {
+        console.log(chandelRes);
+        this.setState({
+          chandelCities: chandelRes,
+        });
+      });
+  }
+}
