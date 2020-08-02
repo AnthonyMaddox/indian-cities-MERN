@@ -45,21 +45,13 @@ function Header(props) {
     <div>
       <AppBar color="secondary" position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            //onclick="openNav()"
-          >
-            <MenuIcon />
-          </IconButton>
+          
           <Typography variant="h6" className={classes.title}>Manipur: <small><em>districts and cities</em></small>
             {props.stateName}
           </Typography>
           <Button color="inherit">
             <a className="home" href="">
-            Home
+            Refresh
             </a>
           </Button>
         </Toolbar>
@@ -69,3 +61,13 @@ function Header(props) {
 }
 
 export default Header;
+
+// <IconButton
+//             edge="start"
+//             className={classes.menuButton}
+//             color="inherit"
+//             aria-label="menu"
+//             //onclick="openNav()"
+//           >
+//             <MenuIcon />
+//           </IconButton>

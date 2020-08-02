@@ -17,7 +17,7 @@ class DeleteForm extends Component {
     console.log(idToDelete);
 
     let res = `https://indian-cities-api.herokuapp.com/cities/${idToDelete}`;
-
+    document.getElementById("idInput").value = "";
     fetch(res, {
       method: "DELETE",
     })
