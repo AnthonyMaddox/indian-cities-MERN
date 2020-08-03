@@ -1,4 +1,4 @@
-# **Indian Cities Mern project**
+# **Indian Cities MERN project**
 
 #### This repository is a sample of what a front-end react build could be for my Indian Cities REST api (reconstructed). It allows for data from the state of Manipur to be viewed and allows access to update the entire Indian cities database hosted on heroku.
 

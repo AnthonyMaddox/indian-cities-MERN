@@ -62,12 +62,3 @@ function Header(props) {
 
 export default Header;
 
-// <IconButton
-//             edge="start"
-//             className={classes.menuButton}
-//             color="inherit"
-//             aria-label="menu"
-//             //onclick="openNav()"
-//           >
-//             <MenuIcon />
-//           </IconButton>
