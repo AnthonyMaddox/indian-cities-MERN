@@ -11,6 +11,9 @@ function Bishnupur(props) {
       <div>{props.bishnupurCities[3]}</div>
       <div>{props.bishnupurCities[4]}</div>
       <div>{props.bishnupurCities[5]}</div>
+      <div>{props.bishnupurCities[6]}</div>
+      <div>{props.bishnupurCities[7]}</div>
+      <div>{props.bishnupurCities[8]}</div>
     </div>
   );
 }

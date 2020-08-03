@@ -13,6 +13,9 @@ function ImphalWest(props) {
       <div>{props.imphalWestCities[4]}</div>
       <div>{props.imphalWestCities[5]}</div>
       <div>{props.imphalWestCities[6]}</div>
+      <div>{props.imphalWestCities[7]}</div>
+      <div>{props.imphalWestCities[8]}</div>
+      <div>{props.imphalWestCities[9]}</div>
     </div>
   );
 }

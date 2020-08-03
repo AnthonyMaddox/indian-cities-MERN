@@ -7,40 +7,6 @@ import PostForm from "./PostForm";
 import PutForm from "./PutForm";
 import DeleteForm from "./DeleteForm";
 
-const res =
-  "https://indian-cities-api.herokuapp.com/cities/search?State=Manipur";
-const imphalRes =
-  "https://indian-cities-api.herokuapp.com/cities/search?City=Imphal";
-const samurouRes =
-  "https://indian-cities-api.herokuapp.com/cities/search?City=Samurou";
-const nambolRes =
-  "https://indian-cities-api.herokuapp.com/cities/search?City=Nambol";
-
-const getOptions = {
-  method: "GET",
-  headers: {
-    Accept: "application/json",
-  },
-};
-const postOptions = {
-  method: "POST",
-  headers: {
-    Accept: "application/json",
-  },
-};
-const putOptions = {
-  method: "GET",
-  headers: {
-    Accept: "application/json",
-  },
-};
-const deleteOptions = {
-  method: "DELETE",
-  headers: {
-    Accept: "application/json",
-  },
-};
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -48,14 +14,6 @@ class App extends Component {
       stateName: "",
       allDistricts: [],
       allCites: [],
-      //imphalEastCities: [],
-      //bishnupurCities: [],
-      //thoubalCities: [],
-      //
-      //chandelCities: [],
-      imphalCity: [],
-      nambolCity: [],
-      SamurouCity: [],
     };
   }
   handleClick = (e) => {
@@ -100,8 +58,7 @@ class App extends Component {
       <div className="bodyDiv">
         <div className="top">
           <Header
-            stateName={this.state.stateName}
-            imphalCity={this.state.imphalCity.City}
+            
           />
         </div>
         <div className="majorCities">
@@ -157,34 +114,3 @@ class App extends Component {
 }
 
 export default App;
-
-//  fetch(samurouRes, options)
-//    .then((samurouRes) => {
-//      return samurouRes.json();
-//    })
-//    .then((samurouRes) => {
-//      console.log(samurouRes);
-//      this.setState({
-//        samurouCity: samurouRes,
-//      });
-//    });
-//  fetch(nambolRes, options)
-//    .then((nambolRes) => {
-//      return nambolRes.json();
-//    })
-//    .then((nambolRes) => {
-//      console.log(nambolRes);
-//      this.setState({
-//        imphalCity: nambolRes,
-//      });
-//    });
-//  fetch(imphalRes, options)
-//    .then((imphalRes) => {
-//      return imphalRes.json();
-//    })
-//    .then((imphalRes) => {
-//      console.log(imphalRes);
-//      this.setState({
-//        chandelCities: imphalRes,
-//      });
-//    });

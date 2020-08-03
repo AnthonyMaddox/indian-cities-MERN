@@ -110,3 +110,77 @@ componentDidMount() {
 //   "https://indian-cities-api.herokuapp.com/cities/search?District=Imphal%20West";
 // const chandelRes =
 //   "https://indian-cities-api.herokuapp.com/cities/search?District=Chandel";
+
+const res =
+  "https://indian-cities-api.herokuapp.com/cities/search?State=Manipur";
+const imphalRes =
+  "https://indian-cities-api.herokuapp.com/cities/search?City=Imphal";
+const samurouRes =
+  "https://indian-cities-api.herokuapp.com/cities/search?City=Samurou";
+const nambolRes =
+  "https://indian-cities-api.herokuapp.com/cities/search?City=Nambol";
+
+const getOptions = {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+};
+const postOptions = {
+  method: "POST",
+  headers: {
+    Accept: "application/json",
+  },
+};
+const putOptions = {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+};
+const deleteOptions = {
+  method: "DELETE",
+  headers: {
+    Accept: "application/json",
+  },
+};
+
+ //imphalEastCities: [],
+      //bishnupurCities: [],
+      //thoubalCities: [],
+      //
+      //chandelCities: [],
+      imphalCity: [],
+      nambolCity: [],
+      SamurouCity: [],
+
+      //  fetch(samurouRes, options)
+//    .then((samurouRes) => {
+//      return samurouRes.json();
+//    })
+//    .then((samurouRes) => {
+//      console.log(samurouRes);
+//      this.setState({
+//        samurouCity: samurouRes,
+//      });
+//    });
+//  fetch(nambolRes, options)
+//    .then((nambolRes) => {
+//      return nambolRes.json();
+//    })
+//    .then((nambolRes) => {
+//      console.log(nambolRes);
+//      this.setState({
+//        imphalCity: nambolRes,
+//      });
+//    });
+//  fetch(imphalRes, options)
+//    .then((imphalRes) => {
+//      return imphalRes.json();
+//    })
+//    .then((imphalRes) => {
+//      console.log(imphalRes);
+//      this.setState({
+//        chandelCities: imphalRes,
+//      });
+//    });

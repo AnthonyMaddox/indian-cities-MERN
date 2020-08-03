@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-// import { Formik, Form, Field, ErrorMessage } from "formik";
-
-// const res = "https://indian-cities-api.herokuapp.com/cities";
 
 class PutForm extends Component {
   constructor() {
@@ -11,7 +8,7 @@ class PutForm extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("help im updating");
+    console.log("yikes im updating");
     let idUpdateInput = document.getElementById("idUpdateInput").value;
     JSON.stringify(idUpdateInput);
     let idToUpdate = idUpdateInput;

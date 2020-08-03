@@ -27,7 +27,7 @@ class DeleteForm extends Component {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="formLine">
-          <label htmlFor="idInput">Enter District</label>
+          <label htmlFor="idInput">Enter City ID</label>
           <input id="idInput" name="idInput" type="text" />
         </div>
         <button className="dButton">Delete</button>

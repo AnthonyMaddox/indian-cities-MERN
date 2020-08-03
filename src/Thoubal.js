@@ -14,6 +14,9 @@ function Thoubal(props) {
       <div>{props.thoubalCities[5]}</div>
       <div>{props.thoubalCities[6]}</div>
       <div>{props.thoubalCities[7]}</div>
+      <div>{props.thoubalCities[8]}</div>
+      <div>{props.thoubalCities[9]}</div>
+      <div>{props.thoubalCities[10]}</div>
     </div>
   );
 }
