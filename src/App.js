@@ -57,9 +57,7 @@ class App extends Component {
     return (
       <div className="bodyDiv">
         <div className="top">
-          <Header
-            
-          />
+          <Header />
         </div>
         <div className="majorCities">
           <Button variant="contained" color="secondary">

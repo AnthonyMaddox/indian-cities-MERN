@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-//import { Button } from "@material-ui/core";
+import React from "react";
 import "./App.css";
 
 function ImphalEast(props) {
@@ -20,4 +19,3 @@ function ImphalEast(props) {
 }
 
 export default ImphalEast;
-//{props.imphalEastCities[0].City}
