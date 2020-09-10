@@ -1,19 +1,93 @@
 * {
   font-family: fantasy;
+  -webkit-font-family: fantasy;
   font-weight: bolder;
 }
+
 .bodyDiv {
-  height: 100vh;
+}
+.app {
+  height: 180vh;
   background-image: url(./images/manipuri-tribe.jpg);
   background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-}
-.App {
-  margin-top: -20px;
 }
 
 .districtBtn {
   text-align: center;
+}
+/* pics div */
+.imphalTopDiv {
+  height: 200px;
+  width: 300px;
+  display: none;
+  margin-left: 20px;
+}
+.imphalPic {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 130px;
+  width: 300px;
+  background-image: url(./images/Imphal_manipur.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.imphalDes {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+  background-color: burlywood;
+  font-size: 11px;
+  font-family: "Times New Roman", Times, serif;
+}
+.nambolTopDiv {
+  margin-left: 20px;
+  height: 200px;
+  width: 300px;
+  display: none;
+}
+.nambolPic {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 130px;
+  width: 300px;
+  background-image: url(./images/Nambol_manipur.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.nambolDes {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+  background-color: burlywood;
+  font-size: 11px;
+  font-family: "Times New Roman", Times, serif;
+}
+.samurouTopDiv {
+  margin-left: 20px;
+  height: 200px;
+  width: 300px;
+  display: none;
+}
+.samurouPic {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 130px;
+  width: 300px;
+  background-image: url(./images/Samurou_manipur.png);
+  background-position: center;
+  background-size: cover;
+}
+.samurouDes {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+  background-color: burlywood;
+  font-size: 11px;
+  font-family: "Times New Roman", Times, serif;
 }
 .actualDistrictBtn {
   margin-left: 35vw;
@@ -71,7 +145,7 @@
     5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 .districtDiv {
-  height: 200px;
+  height: auto;
   width: auto;
   display: none;
   margin-top: 30px;
@@ -82,33 +156,42 @@
 }
 
 .IEDiv {
-  height: 200px;
+  height: auto;
   width: 130px;
   display: none;
 }
 .bishDiv {
-  height: 200px;
+  height: auto;
   width: 130px;
   display: none;
 }
 .IWDiv {
-  height: 200px;
+  height: auto;
   width: 130px;
   display: none;
 }
 .thouDiv {
-  height: 200px;
+  height: auto;
   width: 130px;
   display: none;
 }
 .chanDiv {
-  height: 200px;
+  height: auto;
   width: 130px;
   display: none;
 }
 /* form */
-.crudDiv {
+.accessDiv {
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.accessDiv p {
+  font-size: 13px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: -15px;
+  color: rgb(235, 208, 174);
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
 .updateDiv {
   display: none;
@@ -120,12 +203,11 @@
   display: none;
 }
 .addBtn {
-  margin-top: 200px;
+  margin-top: 20px;
   background-color: burlywood;
   padding: 1px 20px;
 }
 .crudDiv {
-  margin-top: 15px;
   display: flex;
   justify-content: center;
 }
@@ -143,4 +225,15 @@
 }
 button {
   cursor: pointer;
+}
+@media screen and (max-width: 690px) {
+  .districtBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .app {
+    height: 285vh;
+  }
 }
