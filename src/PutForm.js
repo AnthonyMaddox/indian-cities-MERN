@@ -41,7 +41,7 @@ class PutForm extends Component {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="formLine">
-          <label htmlFor="id">Enter City id</label>
+          <label htmlFor="id">Enter City ID</label>
           <input id="idUpdateInput" name="id" type="text" />
         </div>
         <div className="formLine">
